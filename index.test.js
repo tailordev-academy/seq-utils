@@ -8,7 +8,7 @@ test('it generates sequences', () => {
 
   expect(seq.id).toBeDefined();
   expect(seq.name).toBeDefined();
-  expect(seq.sequence).toBeDefined();
+  expect(seq.dna).toBeDefined();
 });
 
 test('it returns a Seq instance from a sequence', () => {
