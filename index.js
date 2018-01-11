@@ -17,6 +17,6 @@ export const generate = () => {
   };
 };
 
-export const readSequence = (sequence) => {
-  return (new Nt.Seq()).read(sequence);
+export const createSequenceFromDNA = (dna) => {
+  return (new Nt.Seq()).read(dna);
 };

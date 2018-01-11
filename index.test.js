@@ -1,5 +1,5 @@
 // index.test.js
-import { generate, readSequence } from './index';
+import { generate, createSequenceFromDNA } from './index';
 import { Seq } from 'ntseq';
 
 
@@ -12,7 +12,7 @@ test('it generates sequences', () => {
 });
 
 test('it returns a Seq instance from a sequence', () => {
-  const seq = readSequence('ATCG');
+  const seq = createSequenceFromDNA('ATCG');
 
   expect(seq).toBeInstanceOf(Seq);
   expect(seq.sequence()).toEqual('ATCG');
