@@ -3,9 +3,15 @@ node_js:
   - "8"
   - "9"
 
-deploy:
-  provider: npm
-  email: "$NPM_EMAIL"
-  api_key: "$NPM_TOKEN"
-  on:
-    tags: true
+jobs:
+  include:
+    - stage: npm release
+      node_js: "8"
+      script: skip
+      deploy:
+        provider: npm
+        email: "$NPM_EMAIL"
+        api_key: "$NPM_TOKEN"
+        skip_cleanup: true
+        on:
+          tags: true
